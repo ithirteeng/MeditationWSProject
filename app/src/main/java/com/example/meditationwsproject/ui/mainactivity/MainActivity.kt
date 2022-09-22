@@ -1,7 +1,8 @@
-package com.example.meditationwsproject
+package com.example.meditationwsproject.ui.mainactivity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.meditationwsproject.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
