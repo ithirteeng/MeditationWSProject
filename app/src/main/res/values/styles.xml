@@ -11,4 +11,16 @@
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+
+    <style name="edit_text_style">
+        <item name="android:color">@color/login_edit_text_color</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:backgroundTint">@color/login_edit_text_color</item>
+        <item name="android:textColorHint">@color/login_edit_text_color</item>
+        <item name="android:fontFamily">@font/alegreya_regular</item>
+        <item name="android:textSize">@dimen/login_edit_texts_size</item>
+        <item name="android:paddingStart">@dimen/login_edit_texts_padding_start</item>
+        <item name="android:paddingBottom">@dimen/login_edit_texts_padding_bottom</item>
+    </style>
 </resources>

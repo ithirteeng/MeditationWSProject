@@ -10,5 +10,6 @@
     <!--  my colors  -->
     <color name="background_color">#253334</color>
     <color name="text_color">#FFFFFFFF</color>
-    <color name="login_onboarding_buttons_color">#7C9A92</color>
+    <color name="login_onboarding_buttons_color">#C37C9A92</color>
+    <color name="login_edit_text_color">#BEC2C2</color>
 </resources>

@@ -4,6 +4,203 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_color"
     tools:context=".ui.loginactivity.LoginActivity">
+
+    <ImageView
+        android:id="@+id/logo_image_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/logo_content_description"
+        android:scaleType="fitStart"
+        android:scaleX="1.3"
+        android:scaleY="1.4"
+        app:layout_constraintBottom_toTopOf="@+id/logo_bottom_guideline"
+        app:layout_constraintEnd_toStartOf="@+id/logo_right_guideline"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toTopOf="@+id/logo_top_guideleine"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logo_meditation" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/logo_bottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.18" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/logo_right_guideline"
+        style="@style/edit_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.27" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/logo_top_guideleine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/logo_left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_corner_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92" />
+
+    <TextView
+        android:id="@+id/sign_in_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alegreya_medium"
+        android:text="@string/sign_in_text"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/login_sign_in_text"
+        app:layout_constraintBottom_toTopOf="@+id/sign_text_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/logo_left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/logo_image_view" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/sign_text_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.26" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/edit_text_top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/edit_text_bottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.57" />
+
+    <EditText
+        android:id="@+id/email_edit_text"
+        style="@style/edit_text_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/login_email_text"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/password_edit_text"
+        app:layout_constraintEnd_toStartOf="@+id/left_corner_guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/logo_left_guideline"
+        app:layout_constraintTop_toTopOf="@+id/edit_text_top_guideline"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/password_edit_text"
+        style="@style/edit_text_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/login_password_text"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/edit_text_bottom_guideline"
+        app:layout_constraintEnd_toStartOf="@+id/left_corner_guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/logo_left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/email_edit_text"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <Button
+        android:id="@+id/sign_in_button"
+        style="@style/onboarding_login_buttons_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:text="@string/sign_in_text"
+        app:layout_constraintBottom_toTopOf="@+id/profile_button"
+        app:layout_constraintEnd_toStartOf="@+id/left_corner_guideline"
+        app:layout_constraintStart_toStartOf="@+id/logo_left_guideline"
+        app:layout_constraintTop_toTopOf="@+id/buttons_top_guideline"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/profile_button"
+        style="@style/onboarding_login_buttons_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:text="@string/login_profile_button"
+        app:layout_constraintBottom_toTopOf="@+id/buttons_bottom_background"
+        app:layout_constraintEnd_toStartOf="@+id/left_corner_guideline"
+        app:layout_constraintStart_toStartOf="@+id/logo_left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_button" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/buttons_bottom_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.87" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/buttons_top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.63" />
+
+    <TextView
+        android:id="@+id/register_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="@string/login_register_text"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/login_register_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/profile_button"
+        app:layout_constraintEnd_toStartOf="@+id/left_corner_guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/sign_in_button"
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_button"
+        app:layout_constraintVertical_bias="0.523"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/leaves_imge_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/leaves_content_view"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.638"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sign_in_button"
+        app:srcCompat="@drawable/background_leaves" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

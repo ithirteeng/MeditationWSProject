@@ -7,4 +7,9 @@
     <dimen name="login_onboarding_buttons_margin">20dp</dimen>
     <dimen name="onboarding_registration_text_size">20sp</dimen>
     <dimen name="onboarding_registration_margin">16sp</dimen>
+    <dimen name="login_sign_in_text">35sp</dimen>
+    <dimen name="login_edit_texts_size">20sp</dimen>
+    <dimen name="login_edit_texts_padding_start">15dp</dimen>
+    <dimen name="login_edit_texts_padding_bottom">-5dp</dimen>
+    <dimen name="login_register_text_size">16sp</dimen>
 </resources>
