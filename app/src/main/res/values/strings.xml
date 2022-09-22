@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MeditationWSProject</string>
+    <string name="logoContentDescription">this is a logo</string>
+    <string name="greeting_text">ПРИВЕТ</string>
+    <string name="wishes_text">Наслаждайся отборочными.\n Будь внимателен.\n Делай хорошо.</string>
+    <string name="onboarding_button_text">Войти в аккаунт</string>
+    <string name="registration_suggestion_text">Зарегистрируйтесь</string>
+    <string name="registration_question_text">Ещё нет аккаунта? </string>
 </resources>

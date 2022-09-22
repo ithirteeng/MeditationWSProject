@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="greeting_text_size">45sp</dimen>
+    <dimen name="wishes_text_size">18sp</dimen>
+    <dimen name="login_onboarding_buttons_text_size">27sp</dimen>
+    <dimen name="login_onboarding_buttons_padding">15dp</dimen>
+    <dimen name="login_onboarding_buttons_margin">20dp</dimen>
+    <dimen name="onboarding_registration_text_size">20sp</dimen>
+    <dimen name="onboarding_registration_margin">16sp</dimen>
+</resources>
