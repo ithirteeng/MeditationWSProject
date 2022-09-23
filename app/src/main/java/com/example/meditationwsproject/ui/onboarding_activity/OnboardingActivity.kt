@@ -1,4 +1,4 @@
-package com.example.meditationwsproject.ui.onboardingactivity
+package com.example.meditationwsproject.ui.onboarding_activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

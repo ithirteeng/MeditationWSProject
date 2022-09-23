@@ -14,16 +14,16 @@
         android:theme="@style/Theme.MeditationWSProject"
         tools:targetApi="31">
         <activity
-            android:name=".ui.mainactivity.MainActivity"
+            android:name=".ui.main_activity.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.menuactivity.MenuActivity"
+            android:name=".ui.menu_activity.MenuActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.registrationactivity.RegistrationActivity"
+            android:name=".ui.registration_activity.RegistrationActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.loginactivity.LoginActivity"
+            android:name=".ui.login_activity.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,10 +32,10 @@
         </activity>
 
         <activity
-            android:name=".ui.onboardingactivity.OnboardingActivity"
+            android:name=".ui.onboarding_activity.OnboardingActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.spashactivity.SplashActivity"
+            android:name=".ui.spash_activity.SplashActivity"
             android:exported="false">
 
         </activity>

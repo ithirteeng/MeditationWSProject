@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
-    tools:context=".ui.loginactivity.LoginActivity">
+    tools:context=".ui.login_activity.LoginActivity">
 
     <ImageView
         android:id="@+id/logo_image_view"
@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toStartOf="@+id/logo_right_guideline"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/left_guideline"
-        app:layout_constraintTop_toTopOf="@+id/logo_top_guideleine"
+        app:layout_constraintTop_toTopOf="@+id/logo_top_guideline"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/logo_meditation" />
 
@@ -39,7 +39,7 @@
         app:layout_constraintGuide_percent="0.27" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/logo_top_guideleine"
+        android:id="@+id/logo_top_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -191,7 +191,7 @@
         tools:ignore="TextContrastCheck" />
 
     <ImageView
-        android:id="@+id/leaves_imge_view"
+        android:id="@+id/leaves_image_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:contentDescription="@string/leaves_content_view"

@@ -1,12 +1,12 @@
-package com.example.meditationwsproject.ui.loginactivity
+package com.example.meditationwsproject.ui.spash_activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.meditationwsproject.R
 
-class LoginActivity : AppCompatActivity() {
+class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(R.layout.activity_splash)
     }
 }
