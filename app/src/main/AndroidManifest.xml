@@ -14,31 +14,28 @@
         android:theme="@style/Theme.MeditationWSProject"
         tools:targetApi="31">
         <activity
-            android:name=".ui.mainactivity.MainActivity"
+            android:name=".presentation.main_activity.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.menuactivity.MenuActivity"
+            android:name=".presentation.menu_activity.MenuActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.registrationactivity.RegistrationActivity"
+            android:name=".presentation.registration_activity.RegistrationActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.loginactivity.LoginActivity"
+            android:name=".presentation.login_activity.LoginActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".presentation.onboarding_activity.OnboardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.splash_activity.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".ui.onboardingactivity.OnboardingActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.spashactivity.SplashActivity"
-            android:exported="false">
-
-        </activity>
     </application>
-
 </manifest>
