@@ -1,4 +1,4 @@
-package com.example.meditationwsproject.ui.main_activity
+package com.example.meditationwsproject.presentation.main_activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

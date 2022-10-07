@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_splash_onboarding_screens"
-    tools:context=".ui.spash_activity.SplashActivity" >
+    tools:context=".presentation.splash_activity.SplashActivity" >
 
     <ImageView
-        android:id="@+id/logo_image_view"
+        android:id="@+id/logoImageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:contentDescription="@string/logo_content_description"

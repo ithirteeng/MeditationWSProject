@@ -5,33 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
-    tools:context=".ui.login_activity.LoginActivity">
+    tools:context=".presentation.login_activity.LoginActivity">
 
     <ImageView
-        android:id="@+id/logo_image_view"
+        android:id="@+id/logoImageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:contentDescription="@string/logo_content_description"
         android:scaleType="fitStart"
         android:scaleX="1.3"
         android:scaleY="1.4"
-        app:layout_constraintBottom_toTopOf="@+id/logo_bottom_guideline"
-        app:layout_constraintEnd_toStartOf="@+id/logo_right_guideline"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTopGuideline"
+        app:layout_constraintEnd_toStartOf="@+id/logoRightGuideline"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/left_guideline"
-        app:layout_constraintTop_toTopOf="@+id/logo_top_guideline"
+        app:layout_constraintStart_toStartOf="@+id/logoLeftGuideline"
+        app:layout_constraintTop_toTopOf="@+id/logoTopGuideline"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/logo_meditation" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/logo_bottom_guideline"
+        android:id="@+id/textViewTopGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.18" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/logo_right_guideline"
+        android:id="@+id/logoRightGuideline"
         style="@style/edit_text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,63 +39,63 @@
         app:layout_constraintGuide_percent="0.27" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/logo_top_guideline"
+        android:id="@+id/logoTopGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.06" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/logo_left_guideline"
+        android:id="@+id/leftBorderGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.08" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/left_corner_guideline"
+        android:id="@+id/rightBorderGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.92" />
 
     <TextView
-        android:id="@+id/sign_in_text_view"
+        android:id="@+id/signInTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/alegreya_medium"
         android:text="@string/sign_in_text"
         android:textColor="@color/text_color"
         android:textSize="@dimen/login_sign_in_text"
-        app:layout_constraintBottom_toTopOf="@+id/sign_text_guideline"
+        app:layout_constraintBottom_toTopOf="@+id/signTextBottomGuideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/logo_left_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/logo_image_view" />
+        app:layout_constraintStart_toStartOf="@+id/leftBorderGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/logoImageView" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/sign_text_guideline"
+        android:id="@+id/signTextBottomGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.26" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/edit_text_top_guideline"
+        android:id="@+id/editTextsTopGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.4" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/edit_text_bottom_guideline"
+        android:id="@+id/editTextsBottomGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.57" />
 
     <EditText
-        android:id="@+id/email_edit_text"
+        android:id="@+id/emailEditText"
         style="@style/edit_text_style"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -103,16 +103,16 @@
         android:hint="@string/login_email_text"
         android:importantForAutofill="no"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/password_edit_text"
-        app:layout_constraintEnd_toStartOf="@+id/left_corner_guideline"
+        app:layout_constraintBottom_toTopOf="@+id/passwordEditText"
+        app:layout_constraintEnd_toStartOf="@+id/rightBorderGuideline"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/logo_left_guideline"
-        app:layout_constraintTop_toTopOf="@+id/edit_text_top_guideline"
+        app:layout_constraintStart_toStartOf="@+id/leftBorderGuideline"
+        app:layout_constraintTop_toTopOf="@+id/editTextsTopGuideline"
         app:layout_constraintVertical_chainStyle="spread_inside"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/password_edit_text"
+        android:id="@+id/passwordEditText"
         style="@style/edit_text_style"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -120,78 +120,78 @@
         android:hint="@string/login_password_text"
         android:importantForAutofill="no"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/edit_text_bottom_guideline"
-        app:layout_constraintEnd_toStartOf="@+id/left_corner_guideline"
+        app:layout_constraintBottom_toTopOf="@+id/editTextsBottomGuideline"
+        app:layout_constraintEnd_toStartOf="@+id/rightBorderGuideline"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/logo_left_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/email_edit_text"
+        app:layout_constraintStart_toStartOf="@+id/leftBorderGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText"
         tools:ignore="TouchTargetSizeCheck" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/left_guideline"
+        android:id="@+id/logoLeftGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.06" />
 
     <Button
-        android:id="@+id/sign_in_button"
+        android:id="@+id/signInButton"
         style="@style/onboarding_login_buttons_style"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="0dp"
         android:text="@string/sign_in_text"
-        app:layout_constraintBottom_toTopOf="@+id/profile_button"
-        app:layout_constraintEnd_toStartOf="@+id/left_corner_guideline"
-        app:layout_constraintStart_toStartOf="@+id/logo_left_guideline"
-        app:layout_constraintTop_toTopOf="@+id/buttons_top_guideline"
+        app:layout_constraintBottom_toTopOf="@+id/profileButton"
+        app:layout_constraintEnd_toStartOf="@+id/rightBorderGuideline"
+        app:layout_constraintStart_toStartOf="@+id/leftBorderGuideline"
+        app:layout_constraintTop_toTopOf="@+id/buttonsTopGuideline"
         app:layout_constraintVertical_chainStyle="spread_inside"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Button
-        android:id="@+id/profile_button"
+        android:id="@+id/profileButton"
         style="@style/onboarding_login_buttons_style"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="0dp"
         android:text="@string/login_profile_button"
-        app:layout_constraintBottom_toTopOf="@+id/buttons_bottom_background"
-        app:layout_constraintEnd_toStartOf="@+id/left_corner_guideline"
-        app:layout_constraintStart_toStartOf="@+id/logo_left_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/sign_in_button" />
+        app:layout_constraintBottom_toTopOf="@+id/buttonsBottomGuideline"
+        app:layout_constraintEnd_toStartOf="@+id/rightBorderGuideline"
+        app:layout_constraintStart_toStartOf="@+id/leftBorderGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/signInButton" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/buttons_bottom_background"
+        android:id="@+id/buttonsBottomGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.87" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/buttons_top_guideline"
+        android:id="@+id/buttonsTopGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.63" />
 
     <TextView
-        android:id="@+id/register_text_view"
+        android:id="@+id/registerTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="monospace"
         android:text="@string/login_register_text"
         android:textColor="@color/text_color"
         android:textSize="@dimen/login_register_text_size"
-        app:layout_constraintBottom_toTopOf="@+id/profile_button"
-        app:layout_constraintEnd_toStartOf="@+id/left_corner_guideline"
+        app:layout_constraintBottom_toTopOf="@+id/profileButton"
+        app:layout_constraintEnd_toStartOf="@+id/rightBorderGuideline"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/sign_in_button"
-        app:layout_constraintTop_toBottomOf="@+id/sign_in_button"
+        app:layout_constraintStart_toStartOf="@+id/signInButton"
+        app:layout_constraintTop_toBottomOf="@+id/signInButton"
         app:layout_constraintVertical_bias="0.523"
         tools:ignore="TextContrastCheck" />
 
     <ImageView
-        android:id="@+id/leaves_image_view"
+        android:id="@+id/leavesImageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:contentDescription="@string/leaves_content_view"
@@ -200,7 +200,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.638"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/sign_in_button"
+        app:layout_constraintTop_toTopOf="@+id/signInButton"
         app:srcCompat="@drawable/background_leaves" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

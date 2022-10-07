@@ -1,4 +1,4 @@
-package com.example.meditationwsproject.ui.menu_activity
+package com.example.meditationwsproject.presentation.menu_activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
