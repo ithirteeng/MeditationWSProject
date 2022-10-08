@@ -22,14 +22,8 @@ class SharedPreferencesStorage(context: Context) : UserDataStorage {
 
     override fun getData(): User {
         return User(
-            sharedPreferences.getString(
-                UserDataStorage.EMAIL_KEY,
-                UserDataStorage.EMPTINESS_CASE
-            )!!,
-            sharedPreferences.getString(
-                UserDataStorage.PASSWORD_KEY,
-                UserDataStorage.EMPTINESS_CASE
-            )!!
+            sharedPreferences.getString(UserDataStorage.EMAIL_KEY, UserDataStorage.EMPTINESS_CASE)!!,
+            sharedPreferences.getString(UserDataStorage.PASSWORD_KEY, UserDataStorage.EMPTINESS_CASE)!!
         )
     }
 

@@ -1,5 +1,4 @@
 package com.example.meditationwsproject.domain.usecase
 
-class GetLocalDataUC {
-
+class GetFeelingsUC {
 }
