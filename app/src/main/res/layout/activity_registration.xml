@@ -6,4 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".presentation.activity.registration_activity.RegistrationActivity">
 
+    <TextView
+        android:id="@+id/currentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plugText"
+        android:textSize="@dimen/login_edit_texts_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

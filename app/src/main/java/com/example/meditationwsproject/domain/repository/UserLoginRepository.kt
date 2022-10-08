@@ -5,5 +5,11 @@ import com.example.meditationwsproject.domain.model.UserDataResponse
 import retrofit2.Response
 
 interface UserLoginRepository {
+
     suspend fun postUserData(userData: UserData): Response<UserDataResponse>
+
+    fun saveData(userData: UserData)
+
+    fun getData(): UserData
+
 }

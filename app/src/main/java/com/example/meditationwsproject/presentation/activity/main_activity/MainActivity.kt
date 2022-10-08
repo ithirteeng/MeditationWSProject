@@ -1,12 +1,23 @@
 package com.example.meditationwsproject.presentation.activity.main_activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.meditationwsproject.R
+import androidx.appcompat.app.AppCompatActivity
+import com.example.meditationwsproject.databinding.ActivityMainBinding
+import com.example.meditationwsproject.presentation.activity.login_activity.LoginActivity
+import com.example.meditationwsproject.presentation.model.User
 
 class MainActivity : AppCompatActivity() {
+
+    private val binding by lazy {
+        ActivityMainBinding.inflate(this.layoutInflater)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
+
+        val user = intent.getSerializableExtra(LoginActivity.INTENT_KEY) as User
+        binding.nicknameTextView.text = user.nickname
+
     }
 }
