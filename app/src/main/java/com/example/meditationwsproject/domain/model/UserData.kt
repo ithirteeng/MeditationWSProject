@@ -2,7 +2,7 @@ package com.example.meditationwsproject.domain.model
 
 import com.google.gson.annotations.SerializedName
 
-data class User(
+data class UserData(
     @SerializedName("email")
     val email: String,
     @SerializedName("password")

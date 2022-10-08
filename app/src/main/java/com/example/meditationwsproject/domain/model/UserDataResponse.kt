@@ -2,7 +2,7 @@ package com.example.meditationwsproject.domain.model
 
 import com.google.gson.annotations.SerializedName
 
-data class UserResponse(
+data class UserDataResponse(
     @SerializedName("id")
     var id: String = "",
     @SerializedName("email")

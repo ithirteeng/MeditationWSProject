@@ -1,6 +1,6 @@
 package com.example.meditationwsproject.data.local_storage
 
-import com.example.meditationwsproject.domain.model.User
+import com.example.meditationwsproject.domain.model.UserData
 
 interface UserDataStorage {
     companion object {
@@ -9,7 +9,7 @@ interface UserDataStorage {
         const val EMPTINESS_CASE = "nothing was found"
     }
 
-    fun getData(): User
+    fun getData(): UserData
 
-    fun saveData(user: User)
+    fun saveData(userData: UserData)
 }

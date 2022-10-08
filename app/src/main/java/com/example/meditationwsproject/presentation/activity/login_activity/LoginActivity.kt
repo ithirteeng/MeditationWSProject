@@ -1,7 +1,6 @@
-package com.example.meditationwsproject.presentation.login_activity
+package com.example.meditationwsproject.presentation.activity.login_activity
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.meditationwsproject.databinding.ActivityLoginBinding
 
@@ -27,7 +26,6 @@ class LoginActivity : AppCompatActivity() {
                 binding.emailEditText.text.toString(),
                 binding.passwordEditText.text.toString()
             )
-            Log.d("KEYYY", "something happend")
         }
     }
 }

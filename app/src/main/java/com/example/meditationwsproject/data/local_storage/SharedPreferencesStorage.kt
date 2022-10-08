@@ -3,7 +3,7 @@ package com.example.meditationwsproject.data.local_storage
 import android.content.Context
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKeys
-import com.example.meditationwsproject.domain.model.User
+import com.example.meditationwsproject.domain.model.UserData
 
 class SharedPreferencesStorage(context: Context) : UserDataStorage {
     companion object {
@@ -20,17 +20,17 @@ class SharedPreferencesStorage(context: Context) : UserDataStorage {
         EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
     )
 
-    override fun getData(): User {
-        return User(
+    override fun getData(): UserData {
+        return UserData(
             sharedPreferences.getString(UserDataStorage.EMAIL_KEY, UserDataStorage.EMPTINESS_CASE)!!,
             sharedPreferences.getString(UserDataStorage.PASSWORD_KEY, UserDataStorage.EMPTINESS_CASE)!!
         )
     }
 
-    override fun saveData(user: User) {
+    override fun saveData(userData: UserData) {
         sharedPreferences.edit()
-            .putString(UserDataStorage.EMAIL_KEY, user.email)
-            .putString(UserDataStorage.PASSWORD_KEY, user.password)
+            .putString(UserDataStorage.EMAIL_KEY, userData.email)
+            .putString(UserDataStorage.PASSWORD_KEY, userData.password)
             .apply()
     }
 

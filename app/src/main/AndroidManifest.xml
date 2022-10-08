@@ -15,23 +15,23 @@
         android:theme="@style/Theme.MeditationWSProject"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.main_activity.MainActivity"
+            android:name="com.example.meditationwsproject.presentation.activity.main_activity.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.menu_activity.MenuActivity"
+            android:name="com.example.meditationwsproject.presentation.activity.menu_activity.MenuActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.registration_activity.RegistrationActivity"
+            android:name="com.example.meditationwsproject.presentation.activity.registration_activity.RegistrationActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.login_activity.LoginActivity"
+            android:name="com.example.meditationwsproject.presentation.activity.login_activity.LoginActivity"
             android:exported="false">
         </activity>
         <activity
-            android:name=".presentation.onboarding_activity.OnboardingActivity"
+            android:name="com.example.meditationwsproject.presentation.activity.onboarding_activity.OnboardingActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.splash_activity.SplashActivity"
+            android:name="com.example.meditationwsproject.presentation.activity.splash_activity.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

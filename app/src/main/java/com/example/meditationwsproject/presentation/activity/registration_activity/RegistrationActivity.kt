@@ -1,4 +1,4 @@
-package com.example.meditationwsproject.presentation.registration_activity
+package com.example.meditationwsproject.presentation.activity.registration_activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

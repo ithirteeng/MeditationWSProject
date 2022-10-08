@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_splash_onboarding_screens"
-    tools:context=".presentation.onboarding_activity.OnboardingActivity">
+    tools:context=".presentation.activity.onboarding_activity.OnboardingActivity">
 
     <ImageView
         android:id="@+id/logoImageView"

@@ -2,8 +2,8 @@ package com.example.meditationwsproject.data.services
 
 import com.example.meditationwsproject.domain.model.FeelingsResponse
 import com.example.meditationwsproject.domain.model.QuotesResponse
-import com.example.meditationwsproject.domain.model.User
-import com.example.meditationwsproject.domain.model.UserResponse
+import com.example.meditationwsproject.domain.model.UserData
+import com.example.meditationwsproject.domain.model.UserDataResponse
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -22,7 +22,7 @@ interface ApiService {
     suspend fun getFeelings(): Response<FeelingsResponse>
 
     @POST("user/login")
-    suspend fun postLogin(@Body user: User): Response<UserResponse>
+    suspend fun postLogin(@Body userData: UserData): Response<UserDataResponse>
 
 
 }

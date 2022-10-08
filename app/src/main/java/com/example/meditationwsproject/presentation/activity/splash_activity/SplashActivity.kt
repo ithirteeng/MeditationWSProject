@@ -1,11 +1,11 @@
-package com.example.meditationwsproject.presentation.splash_activity
+package com.example.meditationwsproject.presentation.activity.splash_activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.meditationwsproject.R
-import com.example.meditationwsproject.presentation.onboarding_activity.OnboardingActivity
+import com.example.meditationwsproject.presentation.activity.onboarding_activity.OnboardingActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay

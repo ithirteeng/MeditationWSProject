@@ -1,11 +1,11 @@
 package com.example.meditationwsproject.domain.usecase
 
-import com.example.meditationwsproject.domain.model.User
-import com.example.meditationwsproject.domain.model.UserResponse
+import com.example.meditationwsproject.domain.model.UserData
+import com.example.meditationwsproject.domain.model.UserDataResponse
 import com.example.meditationwsproject.domain.repository.UserLoginRepository
 
 class PostUserDataUC(private val userLoginRepository: UserLoginRepository) {
-    suspend fun execute(user: User): UserResponse {
-        return userLoginRepository.postUserData(user).body()!!
+    suspend fun execute(userData: UserData): UserDataResponse {
+        return userLoginRepository.postUserData(userData).body()!!
     }
 }

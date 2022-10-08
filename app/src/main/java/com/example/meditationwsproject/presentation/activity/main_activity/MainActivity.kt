@@ -1,12 +1,12 @@
-package com.example.meditationwsproject.presentation.menu_activity
+package com.example.meditationwsproject.presentation.activity.main_activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.meditationwsproject.R
 
-class MenuActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_menu)
+        setContentView(R.layout.activity_main)
     }
 }
