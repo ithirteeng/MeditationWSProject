@@ -10,10 +10,8 @@ import com.example.meditationwsproject.domain.model.UserData
 import com.example.meditationwsproject.domain.usecase.PostUserDataUC
 import com.example.meditationwsproject.domain.usecase.SaveUserDataUc
 import com.example.meditationwsproject.domain.usecase.ValidateEmailUC
-import com.example.meditationwsproject.presentation.helpers.ResponseConverter
 import com.example.meditationwsproject.presentation.helpers.StringGetter
 import com.example.meditationwsproject.presentation.helpers.ToastHelper
-import com.example.meditationwsproject.presentation.model.User
 import kotlinx.coroutines.launch
 
 class LoginActivityViewModel(application: Application) : AndroidViewModel(application) {
@@ -40,15 +38,14 @@ class LoginActivityViewModel(application: Application) : AndroidViewModel(applic
 
     private lateinit var userData: UserData
 
-    private val userLiveData = MutableLiveData<User>()
+    private val userLiveData = MutableLiveData<UserData>()
 
     private fun createUser() {
         if (validateEmailUC.execute(userData.email)) {
             viewModelScope.launch {
                 try {
-                    val responseData = postUserDataUC.execute(userData)
-                    userLiveData.value =
-                        ResponseConverter.convertUserDataResponseToUser(responseData)
+                    postUserDataUC.execute(userData)
+                    userLiveData.value = userData
                     saveUserDataUc.execute(userData)
                 } catch (e: NullPointerException) {
                     ToastHelper.makeToast(
@@ -65,7 +62,7 @@ class LoginActivityViewModel(application: Application) : AndroidViewModel(applic
         }
     }
 
-    fun getLiveData(): MutableLiveData<User> {
+    fun getLiveData(): MutableLiveData<UserData> {
         createUser()
         return userLiveData
     }

@@ -5,10 +5,8 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.meditationwsproject.data.repository.UserLoginRepositoryImpl
+import com.example.meditationwsproject.domain.model.UserData
 import com.example.meditationwsproject.domain.usecase.GetUserDataUC
-import com.example.meditationwsproject.domain.usecase.PostUserDataUC
-import com.example.meditationwsproject.presentation.helpers.ResponseConverter
-import com.example.meditationwsproject.presentation.model.User
 import kotlinx.coroutines.launch
 
 class SplashActivityViewModel(application: Application) : AndroidViewModel(application) {
@@ -17,25 +15,20 @@ class SplashActivityViewModel(application: Application) : AndroidViewModel(appli
         UserLoginRepositoryImpl(application.applicationContext)
     }
 
-    private val postUserDataUC by lazy {
-        PostUserDataUC(userLoginRepositoryImpl)
-    }
-
     private val getUserDataUC by lazy {
         GetUserDataUC(userLoginRepositoryImpl)
     }
 
-    private val userLiveData = MutableLiveData<User>()
+    private val userLiveData = MutableLiveData<UserData>()
 
-    fun getLiveData(): MutableLiveData<User> {
+    fun getLiveData(): MutableLiveData<UserData> {
         createUser()
         return userLiveData
     }
 
     private fun createUser() {
         viewModelScope.launch {
-            val responseData = postUserDataUC.execute(getUserDataUC.execute())
-            userLiveData.value = ResponseConverter.convertUserDataResponseToUser(responseData)
+            userLiveData.value = getUserDataUC.execute()
         }
     }
 
