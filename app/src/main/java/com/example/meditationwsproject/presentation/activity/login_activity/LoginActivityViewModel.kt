@@ -7,10 +7,10 @@ import androidx.lifecycle.viewModelScope
 import com.example.meditationwsproject.R
 import com.example.meditationwsproject.data.repository.UserLoginRepositoryImpl
 import com.example.meditationwsproject.domain.model.UserData
-import com.example.meditationwsproject.domain.model.UserDataResponse
 import com.example.meditationwsproject.domain.usecase.PostUserDataUC
 import com.example.meditationwsproject.domain.usecase.SaveUserDataUc
 import com.example.meditationwsproject.domain.usecase.ValidateEmailUC
+import com.example.meditationwsproject.presentation.helpers.ResponseConverter
 import com.example.meditationwsproject.presentation.helpers.StringGetter
 import com.example.meditationwsproject.presentation.helpers.ToastHelper
 import com.example.meditationwsproject.presentation.model.User
@@ -45,9 +45,17 @@ class LoginActivityViewModel(application: Application) : AndroidViewModel(applic
     private fun createUser() {
         if (validateEmailUC.execute(userData.email)) {
             viewModelScope.launch {
-                val responseData = postUserDataUC.execute(userData)
-                userLiveData.value = responseDataToUser(responseData)
-                saveUserDataUc.execute(userData)
+                try {
+                    val responseData = postUserDataUC.execute(userData)
+                    userLiveData.value =
+                        ResponseConverter.convertUserDataResponseToUser(responseData)
+                    saveUserDataUc.execute(userData)
+                } catch (e: NullPointerException) {
+                    ToastHelper.makeToast(
+                        context,
+                        StringGetter.getString(context, R.string.loginErrorText)
+                    )
+                }
             }
         } else {
             ToastHelper.makeToast(
@@ -58,29 +66,12 @@ class LoginActivityViewModel(application: Application) : AndroidViewModel(applic
     }
 
     fun getLiveData(): MutableLiveData<User> {
-            try {
-                createUser()
-            } catch (e: Exception) {
-                ToastHelper.makeToast(
-                    context,
-                    StringGetter.getString(context, R.string.loginErrorText)
-                )
-            }
+        createUser()
         return userLiveData
     }
 
     fun createUserData(email: String, password: String) {
         userData = UserData(email, password)
     }
-
-
-    private fun responseDataToUser(userDataResponse: UserDataResponse): User {
-        return User(
-            email = userDataResponse.email,
-            nickname = userDataResponse.nickName,
-            avatar = userDataResponse.avatar
-        )
-    }
-
 
 }

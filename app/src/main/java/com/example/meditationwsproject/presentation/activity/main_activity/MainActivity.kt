@@ -16,8 +16,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        val user = intent.getSerializableExtra(LoginActivity.INTENT_KEY) as User
+        val user = getUser()
         binding.nicknameTextView.text = user.nickname
 
+    }
+
+    private fun getUser(): User {
+        return intent.getSerializableExtra(LoginActivity.LOGIN_INTENT_KEY) as User
     }
 }

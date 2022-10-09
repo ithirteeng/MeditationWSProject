@@ -13,7 +13,7 @@
     <string name="login_profile_button">Профиль</string>
     <string name="login_register_text">Register</string>
     <!--  application text  -->
-    <string name="loginErrorText">Пользователя с таким именем не существует</string>
+    <string name="loginErrorText">Такого пользователя не существует</string>
     <string name="emailErrorText">Неверный email</string>
     <string name="plugText">Заглушка</string>
 </resources>
