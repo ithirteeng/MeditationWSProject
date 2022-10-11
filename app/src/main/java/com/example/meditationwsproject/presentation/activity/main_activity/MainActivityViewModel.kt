@@ -8,6 +8,8 @@ import com.example.meditationwsproject.R
 import com.example.meditationwsproject.data.repository.UserFeelingsRepositoryImpl
 import com.example.meditationwsproject.data.repository.UserLoginRepositoryImpl
 import com.example.meditationwsproject.data.repository.UserQuotesRepositoryImpl
+import com.example.meditationwsproject.domain.model.Feeling
+import com.example.meditationwsproject.domain.model.Quote
 import com.example.meditationwsproject.domain.model.UserData
 import com.example.meditationwsproject.domain.usecase.GetFeelingsUC
 import com.example.meditationwsproject.domain.usecase.GetQuotesUC
@@ -48,8 +50,14 @@ class MainActivityViewModel(application: Application) : AndroidViewModel(applica
         GetFeelingsUC(userFeelingsRepositoryImpl)
     }
 
-
     private val userLiveData = MutableLiveData<User>()
+    private val feelingsLiveData = MutableLiveData<ArrayList<Feeling>>()
+    private val quotesLiveData = MutableLiveData<ArrayList<Quote>>()
+
+    fun getUserLiveData(userData: UserData): MutableLiveData<User> {
+        createUser(userData)
+        return userLiveData
+    }
 
     private fun createUser(userData: UserData) {
         viewModelScope.launch {
@@ -66,9 +74,28 @@ class MainActivityViewModel(application: Application) : AndroidViewModel(applica
         }
     }
 
-    fun getLiveData(userData: UserData): MutableLiveData<User> {
-        createUser(userData)
-        return userLiveData
+    fun getFeelingsLiveData(): MutableLiveData<ArrayList<Feeling>> {
+        fillFeelingsLiveData()
+        return feelingsLiveData
+    }
+
+    private fun fillFeelingsLiveData() {
+        viewModelScope.launch {
+            val feelingsResponse = getFeelingsUC.execute()
+            feelingsLiveData.value = feelingsResponse.data
+        }
+    }
+
+    fun getQuotesLiveData(): MutableLiveData<ArrayList<Quote>> {
+        fillQuotesLiveData()
+        return  quotesLiveData
+    }
+
+    private fun fillQuotesLiveData() {
+        viewModelScope.launch {
+            val quotesResponse = getQuotesUC.execute()
+            quotesLiveData.value = quotesResponse.data
+        }
     }
 
 }

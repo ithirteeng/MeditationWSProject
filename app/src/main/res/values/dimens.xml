@@ -12,4 +12,5 @@
     <dimen name="login_edit_texts_padding_start">15dp</dimen>
     <dimen name="login_edit_texts_padding_bottom">-5dp</dimen>
     <dimen name="login_register_text_size">16sp</dimen>
+    <dimen name="tabLayoutPadding">10dp</dimen>
 </resources>

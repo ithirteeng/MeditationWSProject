@@ -12,4 +12,5 @@
     <color name="text_color">#FFFFFFFF</color>
     <color name="login_onboarding_buttons_color">#C37C9A92</color>
     <color name="login_edit_text_color">#BEC2C2</color>
+    <color name="progress_bar_color">#80FFFFFF</color>
 </resources>

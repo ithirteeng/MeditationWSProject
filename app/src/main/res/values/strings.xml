@@ -16,4 +16,6 @@
     <string name="loginErrorText">Неправильное имя пользователя или пароль</string>
     <string name="emailErrorText">Неверный email</string>
     <string name="plugText">Заглушка</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
