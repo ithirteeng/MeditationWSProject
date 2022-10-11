@@ -5,9 +5,14 @@ import android.graphics.PorterDuffColorFilter
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.commit
+import androidx.fragment.app.replace
 import com.example.meditationwsproject.R
 import com.example.meditationwsproject.databinding.ActivityMainBinding
 import com.example.meditationwsproject.domain.model.UserData
+import com.example.meditationwsproject.presentation.activity.main_activity.fragment.listen_fragment.ListenFragment
+import com.example.meditationwsproject.presentation.activity.main_activity.fragment.main_fragment.HomeFragment
+import com.example.meditationwsproject.presentation.activity.main_activity.fragment.profile_fragment.ProfileFragment
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
 
@@ -46,6 +51,11 @@ class MainActivity : AppCompatActivity() {
         )
         binding.tabLayout.addOnTabSelectedListener(object : OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
+                when (tab.position) {
+                    0 -> replaceHomeFragment()
+                    1 -> replaceProfileFragment()
+                    2 -> replaceListenFragment()
+                }
                 color = resources.getColor(R.color.white, theme)
                 tab.icon!!.colorFilter = PorterDuffColorFilter(color, PorterDuff.Mode.SRC_IN)
             }
@@ -58,6 +68,27 @@ class MainActivity : AppCompatActivity() {
             override fun onTabReselected(tab: TabLayout.Tab) {
             }
         })
+    }
+
+    private fun replaceHomeFragment() {
+        supportFragmentManager.commit {
+            setReorderingAllowed(true)
+            replace<HomeFragment>(R.id.fragmentContainerView)
+        }
+    }
+
+    private fun replaceListenFragment() {
+        supportFragmentManager.commit {
+            setReorderingAllowed(true)
+            replace<ListenFragment>(R.id.fragmentContainerView)
+        }
+    }
+
+    private fun replaceProfileFragment() {
+        supportFragmentManager.commit {
+            setReorderingAllowed(true)
+            replace<ProfileFragment>(R.id.fragmentContainerView)
+        }
     }
 
     private fun getUserData(): UserData {
